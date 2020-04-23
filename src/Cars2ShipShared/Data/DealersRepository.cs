@@ -17,7 +17,6 @@ namespace Cars2Ship.Shared.Data
         {
             var dealer = Context.Dealers.AsQueryable();
 
- 
             return dealer
                         .Where(i => i.Id == id && i.UserId == userId)
                         .SingleOrDefault();
@@ -47,6 +46,7 @@ namespace Cars2Ship.Shared.Data
         public override IList<Dealer> GetList(string userId)
         {
             return Context.Dealers
+                        .Where(i => i.UserId == userId)
                         .OrderBy(i => i.Id)
                         .ToList();
         }
@@ -54,6 +54,7 @@ namespace Cars2Ship.Shared.Data
         public IList<Dealer> GetAll()
         {
             return Context.Dealers
+
                         .OrderBy(i => i.Id)
                         .ToList();
         }

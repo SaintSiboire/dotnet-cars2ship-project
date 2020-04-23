@@ -10,11 +10,12 @@ using Cars2Ship.Shared.Models;
 
 namespace Cars2Ship.Shared.Data
 {
-    public class Context : DbContext
+    public class Context : IdentityDbContext<User>
     {
         public  DbSet<Dealer> Dealers { get; set; }
 
-    
+        public Context()
+            :base("Context") { }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
