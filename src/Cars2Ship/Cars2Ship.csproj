@@ -121,9 +121,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cars2ShipShared\Cars2ShipShared.csproj">
+    <ProjectReference Include="..\Cars2ShipShared\Cars2Ship.Shared.csproj">
       <Project>{58be17d1-7f75-478a-a862-5d559a5ea755}</Project>
-      <Name>Cars2ShipShared</Name>
+      <Name>Cars2Ship.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
